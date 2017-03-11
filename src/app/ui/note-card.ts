@@ -51,4 +51,7 @@ import { Component, Input } from '@angular/core';
 
 export class NoteCard {
   @Input() note = {};
+  onChecked() {
+    console.log('hello!')
+  }
 }
