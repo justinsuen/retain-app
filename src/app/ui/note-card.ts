@@ -37,6 +37,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <div
       class="note-card row shadow-1"
+      [ngStyle]="{'background-color': note.color}"
       (mouseenter)="toggleCheck()"
       (mouseleave)="toggleCheck()"
     >

@@ -20,6 +20,7 @@ import { Component } from '@angular/core';
           <note-card
             class="col-xs-4"
             [note]="note"
+            *ngFor="let note of notes"
           >
           </note-card>
         </div>
@@ -29,5 +30,9 @@ import { Component } from '@angular/core';
 })
 
 export class NotesContainer {
-  note = {title: 'this is a note', value: 'eat some food'}
+  notes = [
+    {title: 'Learn Angular 2', value: 'Many tutorials...', color: 'lightblue'},
+    {title: 'Cook', value: 'Lunch time!', color: 'red'},
+    {title: 'Eat', value: 'Everything', color: 'lightgreen'}
+  ]
 }
