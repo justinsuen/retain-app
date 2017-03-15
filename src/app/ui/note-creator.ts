@@ -46,4 +46,9 @@ import { Component } from '@angular/core';
   `
 })
 
-export class NoteCreator {}
+export class NoteCreator {
+  newNote = {
+    title: '',
+    value: ''
+  }
+}
