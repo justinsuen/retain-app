@@ -39,6 +39,12 @@ import { Component, Output, EventEmitter } from '@angular/core';
           class="actions col-xs-12 row between-xs"
           *ngIf="fullForm"
           >
+          <div class="col-xs-3">
+            <color-picker
+              [colors]="colors"
+              >
+            </color-picker>
+          </div>
           <button
             type="submit"
             class="btn-light"
@@ -53,6 +59,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
 
 export class NoteCreator {
   @Output() createNote = new EventEmitter();
+
+  colors: string[] = ['#B19CD9', '#9CBAD9', '#D99C9C', '#9CD9C3', '#D8D99C', '#88E096', '#FFFFFF'];
 
   newNote = {
     title: '',
